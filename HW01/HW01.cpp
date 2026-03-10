@@ -28,28 +28,28 @@ int main() {
 		cout << "HP를 입력해주세요 : ";
 		cin >> HP;
 		if (HP >= 50) break;
-		cout << "HP를 50이상으로 입력해주세요.";
+		cout << "HP를 50이상으로 입력해주세요." << endl;
 	}
 
 	while (1) {
 		cout << "MP를 입력해주세요 : ";
 		cin >> MP;
 		if (MP >= 50) break;
-		cout << "MP를 50이상으로 입력해주세요.";
+		cout << "MP를 50이상으로 입력해주세요." << endl;
 	}
 
 	while (1) {
 		cout << "Attack을 입력해주세요 : ";
 		cin >> Attack;
 		if (Attack >= 0) break;
-		cout << "Attack을 0이상으로 입력해주세요.";
+		cout << "Attack을 0이상으로 입력해주세요." << endl;
 	}
 
 	while (1) {
 		cout << "Defence를 입력해주세요 : ";
 		cin >> Defence;
 		if (Defence >= 0) break;
-		cout << "Defence를 0이상으로 입력해주세요.";
+		cout << "Defence를 0이상으로 입력해주세요." << endl;
 	}
 
 	int status[4] = { HP, MP, Attack, Defence };
@@ -61,13 +61,13 @@ int main() {
 		switch (num) {
 		case 1:
 			if (h_count <= 0) {
-				cout << "Potions Empty!";
+				cout << "Potions Empty!" << endl;
 			}
 			else {
 				setPotion(h_count, &HP, &garbage);
 				h_count--;
 				cout << "HP가 20 만큼 회복되었습니다." << endl;
-				cout << "HP 포션 남은 개수 : " << h_count << "현재 MP : " << HP << endl;
+				cout << "HP 포션 남은 개수 : " << h_count << ", 현재 MP : " << HP << endl;
 			}
 			break;
 
@@ -79,7 +79,7 @@ int main() {
 				setPotion(m_count, &garbage, &MP);
 				m_count--;
 				cout << "MP가 20 만큼 회복되었습니다." << endl;
-				cout << "MP 포션 남은 개수 : " << m_count << "현재 MP : " << MP << endl;
+				cout << "MP 포션 남은 개수 : " << m_count << ", 현재 MP : " << MP << endl;
 			}
 			break;
 
@@ -96,10 +96,14 @@ int main() {
 			break;
 
 		case 5:
-			cout << "HP : " << HP << "MP : " << MP << "공격력 : " << Attack << "방어력 : " << Defence << endl;
+			cout << "[현재 능력치]" << endl;
+			cout << "HP : " << HP << endl;
+			cout << "MP : " << MP << endl;
+			cout << "공격력 : " << Attack << endl;
+			cout << "방어력 : " << Defence << endl;
 			cout << " << 남은 포션 개수 >> " << endl;
-			cout << "HP : " << h_count << endl;
-			cout << "MP : " << m_count << endl;
+			cout << "HP_potion : " << h_count << endl;
+			cout << "MP_potion : " << m_count << endl;
 			break;
 
 		case 6:
